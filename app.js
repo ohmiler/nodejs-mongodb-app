@@ -29,6 +29,10 @@ const productSchema = new mongoose.Schema({
 
 const Product = mongoose.model('Product', productSchema);
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Product API! Server is Running.');
+})
+
 // Create a new product (POST /products)
 app.post('/products', async (req, res) => {
     try {
